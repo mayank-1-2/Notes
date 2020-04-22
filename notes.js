@@ -108,7 +108,7 @@ function markimp(index) {
         cardt = cardtxt.innerText;
         let n = titleobj.indexOf(cardt)
         if (index == n) {
-            ans[index] = "  Imp";
+            ans[index] = "  ( *Imp ) ";
             btnimp[index] = "Mark as Unimportant";
         }
 
@@ -125,7 +125,7 @@ function unmark(index) {
         let cardtxt = element.getElementsByTagName("h5")[0];
         let txt = "";
         cardt = cardtxt.innerText;
-        if (cardt.endsWith("Imp") == true) {
+        if (cardt.endsWith("( *Imp )") == true) {
             for (i = 0; cardt[i] != " "; i++) {
                 txt += cardt[i];
             }
